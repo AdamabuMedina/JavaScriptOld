@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title-editor {
+  margin: 0 auto;
+}
+
+.editor {
+  margin: 50px auto;
+  padding: 10px;
+  max-width: 780px;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  border: 1px solid #333;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.buttons {
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+}

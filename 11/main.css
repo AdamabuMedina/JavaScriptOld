@@ -1,0 +1,26 @@
+body {
+  background-color: #333;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.ajax-block {
+  margin-bottom: 20px;
+  padding: 40px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.container {
+  margin: 0 auto;
+}
