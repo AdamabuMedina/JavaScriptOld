@@ -5,19 +5,19 @@ let btn = document.querySelector("button")
 btn.addEventListener("click", function (e) {
    e.preventDefault();//отменяем стандартн.повередение
 
-   // //Создаем новый экземпляр объекта XHR
-   // // для отправки асинхронного запроса
+   //Создаем новый экземпляр объекта XHR
+   // для отправки асинхронного запроса
    // let request = new XMLHttpRequest();
 
 
-   // // создаем еще один обработчик успешного ответа от сервера
+   // создаем еще один обработчик успешного ответа от сервера
    // request.onload = function () {
-   //    // В момент когда от сервера придет ответ
+   // В момент когда от сервера придет ответ
    //    let text = request.responseText;
    //    document.querySelector(".text").innerHTML = text;
    // }
 
-   // // Открываем соеденение и отправляем запрос
+   // Открываем соеденение и отправляем запрос
    // request.open("GET", "/data.txt");
    // request.send();
 
