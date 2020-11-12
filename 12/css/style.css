@@ -1,18 +1,18 @@
 .football {
-	position: relative;
-	margin-top: 20px;
-	margin-bottom: 20px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .field {
-	width: 100%;
-	border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .ball {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100px;
-	height: 100px;
+  position: absolute;
+  top: 45%;
+  left: 47.5%;
+  width: 100px;
+  height: 100px;
 }
