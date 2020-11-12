@@ -4,6 +4,8 @@ window.onload = function () {
    let requestURL = api + "people/"
    let searchURL = api + "people/?search="
 
+   const ul = document.createElement("ul")
+
    let button = document.getElementById("search_request_btn")
    let search = document.getElementById("person__search__input")
    let name = document.getElementById("name")
