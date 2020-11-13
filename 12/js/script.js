@@ -1,9 +1,9 @@
 const percentHeightOfField = 90
-const topPointGoal = 42
-const bottomPointGoal = 50
+const topPointGoal = 25
+const bottomPointGoal = 75
 const leftEndField = 0
 const rightEndField = 95
-const ballAnimationTime = 1000
+const ballAnimationTime = 300
 const ball = $(".ball")
 
 ball.click(function () {

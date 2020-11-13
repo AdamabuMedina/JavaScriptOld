@@ -12,6 +12,12 @@ input[text] {
   background: #000;
   color: #ffe81f;
 }
+
+.btn-outline-light {
+  color: #ffe81f;
+  border-color: #ffe81f;
+}
+
 .content {
   display: flex;
   width: 100%;
@@ -36,6 +42,12 @@ input[text] {
 .search .search__result li:hover {
   border-color: #fff;
   color: #fff;
+}
+
+.li__link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .person__data {
