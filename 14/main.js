@@ -1,4 +1,8 @@
-const colors = require("colors/safe")
-
-console.log(colors.red("hello"));
-console.log(colors.green("helloType"));
+class MyClass {
+   constructor() {
+      const foo = "3";
+      const bar = x => x * x;
+      console.log(bar(foo));
+   }
+}
+const inst = new MyClass();
