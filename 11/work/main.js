@@ -9,34 +9,22 @@ window.onload = function () {
    let birth_year = document.getElementById("birth_year")
    let films_count = document.getElementById("films_count")
    let link = document.querySelector(".li__link")
+   let searchResut = document.querySelector(".search__result")
 
    const results = document.querySelector(".search__result")
-
-   function updateInfo(json) {
-      jsonResult = json.results[0]
-      console.log(json.results.length)
-      searchURLValue = searchURL + search.value
-      name.innerText = jsonResult.name
-      height.innerText = jsonResult.height
-      mass.innerText = jsonResult.mass
-      birth_year.innerText = jsonResult.birth_year
-      films_count.innerText = jsonResult.films.length
-   }
-
 
    function getInfo() {
       searchURLValue = searchURL + search.value
       fetch(searchURLValue)
          .then(response => response.json())
-         .then(text => updateInfo(text))
-         .catch(err => { })
+         .then(text => { displayResults(text); personSetting(text) })
+         .catch(err => { alert("Произошла ошибка" + err) })
    }
 
    function getLi() {
       searchURLValue = searchURL + search.value
       fetch(searchURLValue)
          .then(response => response.json())
-         .then(text => displayResults(text))
          .catch(err => { })
    }
 
@@ -44,21 +32,33 @@ window.onload = function () {
       let output = "";
       json.results.forEach(item => {
          output += `
-            <li>
-               <a class="li__link">${item.name}</a>
+            <li class="li__link">
+               ${item.name}
             </li>
          `
       })
       results.innerHTML = output;
    }
 
+   function personSetting(json) {
+      searchResut.addEventListener("click", function (e) {
+         document.querySelectorAll(".li__link").forEach(function (item, index) {
+            if (e.target == item) {
+               jsonResult = json.results[index]
+               searchURLValue = searchURL + search.value
+               name.innerText = jsonResult.name
+               height.innerText = jsonResult.height
+               mass.innerText = jsonResult.mass
+               birth_year.innerText = jsonResult.birth_year
+               films_count.innerText = jsonResult.films.length
+            }
+         })
+      })
+   }
+
    getLi()
 
    buttonSearch.addEventListener("click", getInfo);
 
-   link.addEventListener("click", e => {
-      e.preventDefault()
-      updateInfo(e.target.textContent.trim().toLowerCase());
-   });
 
 };
