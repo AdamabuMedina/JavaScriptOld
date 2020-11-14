@@ -1,16 +1,9 @@
 {
-  "name": "webpack",
+  "name": "webconfig",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
-  "dependencies": {
-    "webpack": "^5.4.0"
-  },
-  "devDependencies": {
-    "webpack-cli": "^4.2.0"
-  },
+  "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
