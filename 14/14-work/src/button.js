@@ -1,4 +1,5 @@
 import Counter from "../counter"
+import css from './button.css'
 
 const cnt = new Counter(1)
 let btn = document.createElement("button")
