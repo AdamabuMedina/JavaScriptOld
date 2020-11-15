@@ -18,10 +18,22 @@ module.exports = {
 
 module.exports = {
    context: path.resolve(__dirname, "src"),
+   mode: 'development',
    entry: "./index.js",
    output: {
       filename: "index.js",
       path: path.resolve(__dirname, "dist")
+   },
+   resolve: {
+      extensions: ['.js', '.json', '.png'],
+      alias: {
+         '@models': path.resolve(__dirname, 'src/models'),
+         '@': path.resolve(__dirname, 'src'),
+      }
+   },
+   devServer: {
+      contentBase: './dist',
+      port: 4200
    },
    plugins: [
       new CleanWebpackPlugin(),
