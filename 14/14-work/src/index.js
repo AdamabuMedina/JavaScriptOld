@@ -1,4 +1,5 @@
 import Counter from "./counter"
+import './button.css'
 
 const cnt = new Counter(10)
 
