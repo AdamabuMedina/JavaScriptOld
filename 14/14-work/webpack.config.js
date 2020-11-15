@@ -4,6 +4,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+
 
 module.exports = {
    entry: "./src/index.js",
@@ -23,7 +26,15 @@ module.exports = {
    plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin(),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new OptimizeCssAssetsPlugin({
+         assetNameRegExp: /\.optimize\.css$/g,
+         cssProcessor: require('cssnano'),
+         cssProcessorPluginOptions: {
+            preset: ['default', { discardComments: { removeAll: true } }],
+         },
+         canPrint: true
+      })
    ],
    module: {
       rules: [
