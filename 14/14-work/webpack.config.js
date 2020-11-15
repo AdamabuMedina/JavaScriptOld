@@ -6,16 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-
-
-module.exports = {
-   entry: "./src/index.js",
-   output: {
-      filename: "build.js",
-      path: path.resolve(__dirname, 'dist')
-   }
-}
-
 module.exports = {
    context: path.resolve(__dirname, "src"),
    mode: 'development',
