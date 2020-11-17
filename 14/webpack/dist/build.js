@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=new class{constructor(e){this.counter=e}getCounter(){return this.counter}increment(){this.counter++}decrement(){this.counter--}}(10);console.log(e.getCounter()),e.increment(),e.increment(),console.log(e.getCounter())})();
